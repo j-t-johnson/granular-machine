@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>app</title>
+        <script src="js/p5.js"></script>
+        <script src="js/main.js"></script>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+
+        <audio id="player" controls></audio>
+
+        <div id="canvasContainer">
+        </div>
+        <header>
+            <div class="wrapper">
+                <div id="container">
+                    <h1>granular example</h1>
+                    <hr>
+                    <div>
+                        <form id="buffers">
+                            <select name="source" class="choice" id="buffsel">
+                                <option value="elements">elements</option>
+                                <option value="guitar">guitar</option>
+                                <option value="micInput">mic input</option>
+                            </select>
+                        </form>
+                        <div id="densityContainer" class="slidercontainer">
+                            <input type="range" id="density" min="10" max="120" value="35" class="slider">
+                                <label for="density">density</label>
+                        </div>
+                        <div id="attackContainer" class="slidercontainer">
+                            <input type="range" id="attack" min="0.01" max="1" step="0.01" value="0.1" class="slider">
+                                <label for="attack">attack</label>
+                        </div>
+                        <div id="decayContainer" class="slidercontainer">
+                            <input type="range" id="decay" min="0.01" max="1" step="0.01" value="0.1" class="slider">
+                                <label for="decay">decay</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>

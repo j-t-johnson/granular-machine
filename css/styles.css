@@ -1,0 +1,166 @@
+
+/*************/
+/* reset all */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/****************/
+/* page styling */
+body {
+    z-index: 2;
+}
+
+header{
+    background-color: (115, 153, 148);
+
+    border-style: solid;
+    border-color: black;
+    border-radius: 30px;
+
+    font-family: "Verdana";
+
+    /* adjusts to window size */
+
+     z-index: 1;
+}
+
+h1{
+
+
+
+}
+
+hr{
+    border-color: black;
+}
+
+/**************/
+/* UI styling */
+
+.wrapper{
+ opacity: 1;
+ }
+
+#container{
+
+	opacity: 0.8;
+	background-color: rgb(105, 204, 192);
+
+	font-size: 14px;
+	font-weight: lighter;
+	letter-spacing: 1px;
+
+
+	padding: 10px;
+
+	border-style: solid;
+	border-color: black;
+	border-width: thin;
+	border-radius: 10px;
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 90%;
+	right: 0px;
+}
+
+
+#buffsel {
+    background-color: rgb(105, 204, 192);
+    outline: none;
+
+	border-style: solid;
+	border-color: black;
+	border-width: thin;
+	border-radius: 10px;
+
+	position: absolute;
+		top: 10px;
+		left: 170px;
+
+    width: 10%;
+
+    transition: 0.7s;
+}
+
+#buffsel:hover {
+    background-color: #5AFF8C;
+}
+
+/***********/
+/* sliders */
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+
+    margin: 0 auto;
+    margin-top: 20px;
+
+    width: 100%;
+    height: 10px;
+    background: grey;
+    outline: none;
+    opacity: 0.4;
+    -webkit-transition: .4s;
+    transition: opacity .4s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 15px;
+    background: #5AFF8C;
+    cursor: pointer;
+}
+
+.slidercontainer{
+	width: 20%;
+	position: absolute;
+	top: 30px;
+}
+
+#attackContainer {
+	left: 10px;
+}
+
+#decayContainer {
+	left: 410px;
+
+}
+
+#densityContainer {
+	left: 810px;
+
+}
+
+#canvasContainer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -9999;
+}
