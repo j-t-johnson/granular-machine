@@ -17,6 +17,8 @@ var att;
 var dec;
 var audioBuffer;
 
+var ctx, master, cVerb, irBuff
+
 var rate;
 
 var posX, posY;
@@ -26,13 +28,37 @@ var posX, posY;
 // "loadbang"
 window.onload = function() {
 
+    //web audio setup
+    ctx = new (window.AudioContext || window.webkitAudioContext);
+
+    //master volume
+    master = ctx.createGain();
+        master.connect(ctx.destination);
+
+    //create convolution verb
+    cVerb = ctx.createConvolver();
+        cVerb.connect(ctx.destination);
+
+    //get IR
+    irBuff;
+    var getIr = new XMLHttpRequest();
+        getIr.open("get", "samples/irs/Space4ArtGallery.wav", true);
+        getIr.responseType = "arraybuffer";
+
+        getIr.onload = function() {
+            ctx.decodeAudioData(getIr.response, function(buffer) {
+                irBuff = buffer;
+            });
+        };
+
+        getIr.send();
+
     var sliderRate;
     var sliderAtt;
     var sliderDec;
 
     //load buffer with page
     bufferSwitch(0);
-
 
     var switcher = document.getElementById("buffsel");
     switcher.addEventListener("input", function() {
@@ -49,34 +75,15 @@ window.onload = function() {
         dec = parseFloat(sliderDec);
     }, 50);
 
+    document.getElementById('startButton').addEventListener('click', function() {
+        ctx.resume().then(() => {
+        });
+    });
 }
 
+
+
 ////////////////////////////////////////////////////////////////////////////////
-
-//web audio setup
-var ctx = new (window.AudioContext || window.webkitAudioContext);
-
-//master volume
-var master = ctx.createGain();
-    master.connect(ctx.destination);
-
-//create convolution verb
-var cVerb = ctx.createConvolver();
-    cVerb.connect(ctx.destination);
-
-//get IR
-var irBuff;
-var getIr = new XMLHttpRequest();
-    getIr.open("get", "samples/irs/Space4ArtGallery.wav", true);
-    getIr.responseType = "arraybuffer";
-
-    getIr.onload = function() {
-        ctx.decodeAudioData(getIr.response, function(buffer) {
-            irBuff = buffer;
-        });
-    };
-
-    getIr.send();
 
 ////////////////////////////////////////////////////////////////////////////
 

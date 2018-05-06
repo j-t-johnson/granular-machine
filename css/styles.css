@@ -93,8 +93,8 @@ hr{
 	border-radius: 10px;
 
 	position: absolute;
-		top: 10px;
-		left: 170px;
+		top: 11%;
+		left: 18%;
 
     width: 10%;
 
@@ -102,6 +102,24 @@ hr{
 }
 
 #buffsel:hover {
+    background-color: #5AFF8C;
+}
+
+#startButton {
+    background-color: rgb(105, 204, 192);
+    outline: none;
+
+	border-style: solid;
+	border-color: black;
+	border-width: thin;
+	border-radius: 10px;
+
+    width: 50%;
+
+    transition: 0.7s;
+}
+
+#startButton:hover {
     background-color: #5AFF8C;
 }
 
@@ -140,7 +158,7 @@ hr{
 .slidercontainer{
 	width: 10%;
 	position: absolute;
-	top: 30px;
+	top: 35%;
 }
 
 #attackContainer {
@@ -155,6 +173,11 @@ hr{
 #densityContainer {
 	left: 31%;
 
+}
+
+#startContainer{
+	left: 12%;
+	top: 10%;
 }
 
 #canvasContainer {
