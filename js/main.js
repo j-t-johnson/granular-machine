@@ -26,12 +26,6 @@ var posX, posY;
 // "loadbang"
 window.onload = function() {
 
-    if (hasGetUserMedia()) {
-      // Good to go!
-    } else {
-      alert('getUserMedia() is not supported by your browser');
-    }
-
     var sliderRate;
     var sliderAtt;
     var sliderDec;
@@ -42,6 +36,7 @@ window.onload = function() {
 
     var switcher = document.getElementById("buffsel");
     switcher.addEventListener("input", function() {
+        bufferSwitch(switcher.selectedIndex);
     });
 
     //call slider values
@@ -68,12 +63,6 @@ var master = ctx.createGain();
 //create convolution verb
 var cVerb = ctx.createConvolver();
     cVerb.connect(ctx.destination);
-
-var micGain = ctx.createGain();
-micGain.gain.value = micLevel;
-
-var liveBuffer = ctx.createBuffer(1, 16384, 44100);
-var theBuffer = ctx.createBuffer(1, 88200, 44100);
 
 //get IR
 var irBuff;
@@ -191,20 +180,12 @@ function grans(pos, pitch) {
 
     var gRate = (5.5*(0.8 - (pitch/windowHeight)))+0.5;
 
-    if (micLevel == 0) {
-        grain.buffer = audioBuffer;
-        len = grain.buffer.duration;
-        factor = pos;
-        position = windowWidth;
-        randFactor = 10;
+    grain.buffer = audioBuffer;
+    len = grain.buffer.duration;
+    factor = pos;
+    position = windowWidth;
+    randFactor = 10;
 
-    } else {
-        grain.buffer = liveBuffer;
-        len = 1;
-        factor = 0;
-        position = 1;
-        randFactor = 0;
-    }
 
     if (gRate < 1) {
         grain.playbackRate.value = 0.5;
@@ -212,7 +193,6 @@ function grans(pos, pitch) {
         grain.playbackRate.value = Math.floor(gRate);
     }
 
-    micGain.connect(contour);
     grain.connect(contour);
 
     // grain start point = buf len * mouse position / x dimension + rand
@@ -231,6 +211,8 @@ function bufferSwitch(input) {
             getSound.open("get", "samples/audio/SH-el.mp3", true);
         } else if (input == 1) {
             getSound.open("get", "samples/audio/guitar.wav", true);
+        } else if (input == 2) {
+            getSound.open("get", "samples/audio/piano+spaceecho.mp3", true);
         }
         else {
             //nothing
