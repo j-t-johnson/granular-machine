@@ -116,7 +116,7 @@ time, mark, audio, video {
 		border-width: thin;
 		border-radius: 10px;
 
-	    width: 100%;
+	    width: 120%;
 
 	    transition: 0.7s;
 	}
