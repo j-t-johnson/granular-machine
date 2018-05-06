@@ -25,164 +25,1057 @@ time, mark, audio, video {
 /****************/
 /* page styling */
 
-body {
-    z-index: 2;
+@media screen and (min-width: 320px) {
+
+	body {
+	    z-index: 2;
+	}
+
+	header{
+	    background-color: (115, 153, 148);
+
+	    border-style: solid;
+	    border-color: black;
+	    border-radius: 30px;
+
+	    font-family: "Verdana";
+
+	    /* adjusts to window size */
+
+	     z-index: 1;
+	}
+
+	h1{
+
+	}
+
+	hr{
+	    border-color: black;
+	}
+
+	/**************/
+	/* UI styling */
+
+	.wrapper{
+	 opacity: 1;
+	 }
+
+	#container{
+
+		opacity: 0.8;
+		background-color: rgb(105, 204, 192);
+
+		font-size: 14px;
+		font-weight: lighter;
+		letter-spacing: 1px;
+
+
+		padding: 10px;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom: 90%;
+		right: 0px;
+	}
+
+
+	#buffsel {
+	    background-color: rgb(105, 204, 192);
+	    outline: none;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+		position: absolute;
+			top: 11%;
+			left: 18%;
+
+	    width: 10%;
+
+	    transition: 0.7s;
+	}
+
+	#buffsel:hover {
+	    background-color: #5AFF8C;
+	}
+
+	#startButton {
+	    background-color: rgb(105, 204, 192);
+	    outline: none;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+	    width: 50%;
+
+	    transition: 0.7s;
+	}
+
+	#startButton:hover {
+	    background-color: #5AFF8C;
+	}
+
+	/***********/
+	/* sliders */
+
+	.slider {
+	    -webkit-appearance: none;
+	    appearance: none;
+
+	    margin: 0 auto;
+	    margin-top: 20px;
+
+	    width: 100%;
+	    height: 10px;
+	    background: grey;
+	    outline: none;
+	    opacity: 0.4;
+	    -webkit-transition: .4s;
+	    transition: opacity .4s;
+	}
+
+	.slider:hover {
+	    opacity: 1;
+	}
+
+	.slider::-webkit-slider-thumb {
+	    -webkit-appearance: none;
+	    appearance: none;
+	    width: 8px;
+	    height: 15px;
+	    background: #5AFF8C;
+	    cursor: pointer;
+	}
+
+	.slidercontainer{
+		width: 10%;
+		position: absolute;
+		top: 35%;
+	}
+
+	#attackContainer {
+		left: 1%;
+	}
+
+	#decayContainer {
+		left: 16%;
+
+	}
+
+	#densityContainer {
+		left: 31%;
+
+	}
+
+	#startContainer{
+		left: 12%;
+		top: 10%;
+	}
+
+	#canvasContainer {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -9999;
+	}
 }
 
-header{
-    background-color: (115, 153, 148);
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
 
-    border-style: solid;
-    border-color: black;
-    border-radius: 30px;
+@media screen and (min-width: 480px) {
 
-    font-family: "Verdana";
+	body {
+	    z-index: 2;
+	}
 
-    /* adjusts to window size */
+	header{
+	    background-color: (115, 153, 148);
 
-     z-index: 1;
+	    border-style: solid;
+	    border-color: black;
+	    border-radius: 30px;
+
+	    font-family: "Verdana";
+
+	    /* adjusts to window size */
+
+	     z-index: 1;
+	}
+
+	h1{
+
+	}
+
+	hr{
+	    border-color: black;
+	}
+
+	/**************/
+	/* UI styling */
+
+	.wrapper{
+	 opacity: 1;
+	 }
+
+	#container{
+
+		opacity: 0.8;
+		background-color: rgb(105, 204, 192);
+
+		font-size: 14px;
+		font-weight: lighter;
+		letter-spacing: 1px;
+
+
+		padding: 10px;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom: 90%;
+		right: 0px;
+	}
+
+
+	#buffsel {
+	    background-color: rgb(105, 204, 192);
+	    outline: none;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+		position: absolute;
+			top: 11%;
+			left: 18%;
+
+	    width: 10%;
+
+	    transition: 0.7s;
+	}
+
+	#buffsel:hover {
+	    background-color: #5AFF8C;
+	}
+
+	#startButton {
+	    background-color: rgb(105, 204, 192);
+	    outline: none;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+	    width: 50%;
+
+	    transition: 0.7s;
+	}
+
+	#startButton:hover {
+	    background-color: #5AFF8C;
+	}
+
+	/***********/
+	/* sliders */
+
+	.slider {
+	    -webkit-appearance: none;
+	    appearance: none;
+
+	    margin: 0 auto;
+	    margin-top: 20px;
+
+	    width: 100%;
+	    height: 10px;
+	    background: grey;
+	    outline: none;
+	    opacity: 0.4;
+	    -webkit-transition: .4s;
+	    transition: opacity .4s;
+	}
+
+	.slider:hover {
+	    opacity: 1;
+	}
+
+	.slider::-webkit-slider-thumb {
+	    -webkit-appearance: none;
+	    appearance: none;
+	    width: 8px;
+	    height: 15px;
+	    background: #5AFF8C;
+	    cursor: pointer;
+	}
+
+	.slidercontainer{
+		width: 10%;
+		position: absolute;
+		top: 35%;
+	}
+
+	#attackContainer {
+		left: 1%;
+	}
+
+	#decayContainer {
+		left: 16%;
+
+	}
+
+	#densityContainer {
+		left: 31%;
+
+	}
+
+	#startContainer{
+		left: 12%;
+		top: 10%;
+	}
+
+	#canvasContainer {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -9999;
+	}
 }
 
-h1{
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
 
+@media screen and (min-width: 600px) {
+
+	body {
+	    z-index: 2;
+	}
+
+	header{
+	    background-color: (115, 153, 148);
+
+	    border-style: solid;
+	    border-color: black;
+	    border-radius: 30px;
+
+	    font-family: "Verdana";
+
+	    /* adjusts to window size */
+
+	     z-index: 1;
+	}
+
+	h1{
+
+	}
+
+	hr{
+	    border-color: black;
+	}
+
+	/**************/
+	/* UI styling */
+
+	.wrapper{
+	 opacity: 1;
+	 }
+
+	#container{
+
+		opacity: 0.8;
+		background-color: rgb(105, 204, 192);
+
+		font-size: 14px;
+		font-weight: lighter;
+		letter-spacing: 1px;
+
+
+		padding: 10px;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom: 90%;
+		right: 0px;
+	}
+
+
+	#buffsel {
+	    background-color: rgb(105, 204, 192);
+	    outline: none;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+		position: absolute;
+			top: 11%;
+			left: 18%;
+
+	    width: 10%;
+
+	    transition: 0.7s;
+	}
+
+	#buffsel:hover {
+	    background-color: #5AFF8C;
+	}
+
+	#startButton {
+	    background-color: rgb(105, 204, 192);
+	    outline: none;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+	    width: 50%;
+
+	    transition: 0.7s;
+	}
+
+	#startButton:hover {
+	    background-color: #5AFF8C;
+	}
+
+	/***********/
+	/* sliders */
+
+	.slider {
+	    -webkit-appearance: none;
+	    appearance: none;
+
+	    margin: 0 auto;
+	    margin-top: 20px;
+
+	    width: 100%;
+	    height: 10px;
+	    background: grey;
+	    outline: none;
+	    opacity: 0.4;
+	    -webkit-transition: .4s;
+	    transition: opacity .4s;
+	}
+
+	.slider:hover {
+	    opacity: 1;
+	}
+
+	.slider::-webkit-slider-thumb {
+	    -webkit-appearance: none;
+	    appearance: none;
+	    width: 8px;
+	    height: 15px;
+	    background: #5AFF8C;
+	    cursor: pointer;
+	}
+
+	.slidercontainer{
+		width: 10%;
+		position: absolute;
+		top: 35%;
+	}
+
+	#attackContainer {
+		left: 1%;
+	}
+
+	#decayContainer {
+		left: 16%;
+
+	}
+
+	#densityContainer {
+		left: 31%;
+
+	}
+
+	#startContainer{
+		left: 12%;
+		top: 10%;
+	}
+
+	#canvasContainer {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -9999;
+	}
 }
 
-hr{
-    border-color: black;
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+
+@media screen and (min-width: 768px) {
+
+	body {
+	    z-index: 2;
+	}
+
+	header{
+	    background-color: (115, 153, 148);
+
+	    border-style: solid;
+	    border-color: black;
+	    border-radius: 30px;
+
+	    font-family: "Verdana";
+
+	    /* adjusts to window size */
+
+	     z-index: 1;
+	}
+
+	h1{
+
+	}
+
+	hr{
+	    border-color: black;
+	}
+
+	/**************/
+	/* UI styling */
+
+	.wrapper{
+	 opacity: 1;
+	 }
+
+	#container{
+
+		opacity: 0.8;
+		background-color: rgb(105, 204, 192);
+
+		font-size: 14px;
+		font-weight: lighter;
+		letter-spacing: 1px;
+
+
+		padding: 10px;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom: 90%;
+		right: 0px;
+	}
+
+
+	#buffsel {
+	    background-color: rgb(105, 204, 192);
+	    outline: none;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+		position: absolute;
+			top: 11%;
+			left: 18%;
+
+	    width: 10%;
+
+	    transition: 0.7s;
+	}
+
+	#buffsel:hover {
+	    background-color: #5AFF8C;
+	}
+
+	#startButton {
+	    background-color: rgb(105, 204, 192);
+	    outline: none;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+	    width: 50%;
+
+	    transition: 0.7s;
+	}
+
+	#startButton:hover {
+	    background-color: #5AFF8C;
+	}
+
+	/***********/
+	/* sliders */
+
+	.slider {
+	    -webkit-appearance: none;
+	    appearance: none;
+
+	    margin: 0 auto;
+	    margin-top: 20px;
+
+	    width: 100%;
+	    height: 10px;
+	    background: grey;
+	    outline: none;
+	    opacity: 0.4;
+	    -webkit-transition: .4s;
+	    transition: opacity .4s;
+	}
+
+	.slider:hover {
+	    opacity: 1;
+	}
+
+	.slider::-webkit-slider-thumb {
+	    -webkit-appearance: none;
+	    appearance: none;
+	    width: 8px;
+	    height: 15px;
+	    background: #5AFF8C;
+	    cursor: pointer;
+	}
+
+	.slidercontainer{
+		width: 10%;
+		position: absolute;
+		top: 35%;
+	}
+
+	#attackContainer {
+		left: 1%;
+	}
+
+	#decayContainer {
+		left: 16%;
+
+	}
+
+	#densityContainer {
+		left: 31%;
+
+	}
+
+	#startContainer{
+		left: 12%;
+		top: 10%;
+	}
+
+	#canvasContainer {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -9999;
+	}
 }
 
-/**************/
-/* UI styling */
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
 
-.wrapper{
- opacity: 1;
- }
+@media screen and (min-width: 900px) {
 
-#container{
+	body {
+	    z-index: 2;
+	}
 
-	opacity: 0.8;
-	background-color: rgb(105, 204, 192);
+	header{
+	    background-color: (115, 153, 148);
 
-	font-size: 14px;
-	font-weight: lighter;
-	letter-spacing: 1px;
+	    border-style: solid;
+	    border-color: black;
+	    border-radius: 30px;
+
+	    font-family: "Verdana";
+
+	    /* adjusts to window size */
+
+	     z-index: 1;
+	}
+
+	h1{
+
+	}
+
+	hr{
+	    border-color: black;
+	}
+
+	/**************/
+	/* UI styling */
+
+	.wrapper{
+	 opacity: 1;
+	 }
+
+	#container{
+
+		opacity: 0.8;
+		background-color: rgb(105, 204, 192);
+
+		font-size: 14px;
+		font-weight: lighter;
+		letter-spacing: 1px;
 
 
-	padding: 10px;
+		padding: 10px;
 
-	border-style: solid;
-	border-color: black;
-	border-width: thin;
-	border-radius: 10px;
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
 
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	bottom: 90%;
-	right: 0px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom: 90%;
+		right: 0px;
+	}
+
+
+	#buffsel {
+	    background-color: rgb(105, 204, 192);
+	    outline: none;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+		position: absolute;
+			top: 11%;
+			left: 18%;
+
+	    width: 10%;
+
+	    transition: 0.7s;
+	}
+
+	#buffsel:hover {
+	    background-color: #5AFF8C;
+	}
+
+	#startButton {
+	    background-color: rgb(105, 204, 192);
+	    outline: none;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+	    width: 50%;
+
+	    transition: 0.7s;
+	}
+
+	#startButton:hover {
+	    background-color: #5AFF8C;
+	}
+
+	/***********/
+	/* sliders */
+
+	.slider {
+	    -webkit-appearance: none;
+	    appearance: none;
+
+	    margin: 0 auto;
+	    margin-top: 20px;
+
+	    width: 100%;
+	    height: 10px;
+	    background: grey;
+	    outline: none;
+	    opacity: 0.4;
+	    -webkit-transition: .4s;
+	    transition: opacity .4s;
+	}
+
+	.slider:hover {
+	    opacity: 1;
+	}
+
+	.slider::-webkit-slider-thumb {
+	    -webkit-appearance: none;
+	    appearance: none;
+	    width: 8px;
+	    height: 15px;
+	    background: #5AFF8C;
+	    cursor: pointer;
+	}
+
+	.slidercontainer{
+		width: 10%;
+		position: absolute;
+		top: 35%;
+	}
+
+	#attackContainer {
+		left: 1%;
+	}
+
+	#decayContainer {
+		left: 16%;
+
+	}
+
+	#densityContainer {
+		left: 31%;
+
+	}
+
+	#startContainer{
+		left: 12%;
+		top: 10%;
+	}
+
+	#canvasContainer {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -9999;
+	}
 }
 
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
+/*************//*************//*************//*************/
 
-#buffsel {
-    background-color: rgb(105, 204, 192);
-    outline: none;
+@media screen and (min-width: 1200px) {
 
-	border-style: solid;
-	border-color: black;
-	border-width: thin;
-	border-radius: 10px;
+	body {
+	    z-index: 2;
+	}
 
-	position: absolute;
-		top: 11%;
-		left: 18%;
+	header{
+	    background-color: (115, 153, 148);
 
-    width: 10%;
+	    border-style: solid;
+	    border-color: black;
+	    border-radius: 30px;
 
-    transition: 0.7s;
-}
+	    font-family: "Verdana";
 
-#buffsel:hover {
-    background-color: #5AFF8C;
-}
+	    /* adjusts to window size */
 
-#startButton {
-    background-color: rgb(105, 204, 192);
-    outline: none;
+	     z-index: 1;
+	}
 
-	border-style: solid;
-	border-color: black;
-	border-width: thin;
-	border-radius: 10px;
+	h1{
 
-    width: 50%;
+	}
 
-    transition: 0.7s;
-}
+	hr{
+	    border-color: black;
+	}
 
-#startButton:hover {
-    background-color: #5AFF8C;
-}
+	/**************/
+	/* UI styling */
 
-/***********/
-/* sliders */
+	.wrapper{
+	 opacity: 1;
+	 }
 
-.slider {
-    -webkit-appearance: none;
-    appearance: none;
+	#container{
 
-    margin: 0 auto;
-    margin-top: 20px;
+		opacity: 0.8;
+		background-color: rgb(105, 204, 192);
 
-    width: 100%;
-    height: 10px;
-    background: grey;
-    outline: none;
-    opacity: 0.4;
-    -webkit-transition: .4s;
-    transition: opacity .4s;
-}
+		font-size: 14px;
+		font-weight: lighter;
+		letter-spacing: 1px;
 
-.slider:hover {
-    opacity: 1;
-}
 
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 8px;
-    height: 15px;
-    background: #5AFF8C;
-    cursor: pointer;
-}
+		padding: 10px;
 
-.slidercontainer{
-	width: 10%;
-	position: absolute;
-	top: 35%;
-}
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
 
-#attackContainer {
-	left: 1%;
-}
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom: 90%;
+		right: 0px;
+	}
 
-#decayContainer {
-	left: 16%;
 
-}
+	#buffsel {
+	    background-color: rgb(105, 204, 192);
+	    outline: none;
 
-#densityContainer {
-	left: 31%;
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
 
-}
+		position: absolute;
+			top: 11%;
+			left: 18%;
 
-#startContainer{
-	left: 12%;
-	top: 10%;
-}
+	    width: 10%;
 
-#canvasContainer {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: -9999;
+	    transition: 0.7s;
+	}
+
+	#buffsel:hover {
+	    background-color: #5AFF8C;
+	}
+
+	#startButton {
+	    background-color: rgb(105, 204, 192);
+	    outline: none;
+
+		border-style: solid;
+		border-color: black;
+		border-width: thin;
+		border-radius: 10px;
+
+	    width: 50%;
+
+	    transition: 0.7s;
+	}
+
+	#startButton:hover {
+	    background-color: #5AFF8C;
+	}
+
+	/***********/
+	/* sliders */
+
+	.slider {
+	    -webkit-appearance: none;
+	    appearance: none;
+
+	    margin: 0 auto;
+	    margin-top: 20px;
+
+	    width: 100%;
+	    height: 10px;
+	    background: grey;
+	    outline: none;
+	    opacity: 0.4;
+	    -webkit-transition: .4s;
+	    transition: opacity .4s;
+	}
+
+	.slider:hover {
+	    opacity: 1;
+	}
+
+	.slider::-webkit-slider-thumb {
+	    -webkit-appearance: none;
+	    appearance: none;
+	    width: 8px;
+	    height: 15px;
+	    background: #5AFF8C;
+	    cursor: pointer;
+	}
+
+	.slidercontainer{
+		width: 10%;
+		position: absolute;
+		top: 35%;
+	}
+
+	#attackContainer {
+		left: 1%;
+	}
+
+	#decayContainer {
+		left: 16%;
+
+	}
+
+	#densityContainer {
+		left: 31%;
+
+	}
+
+	#startContainer{
+		left: 12%;
+		top: 10%;
+	}
+
+	#canvasContainer {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -9999;
+	}
 }
