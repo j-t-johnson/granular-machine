@@ -105,6 +105,8 @@ function setup() {
 
     ellipseMode(RADIUS);
     noStroke();
+
+    console.log(windowWidth);
 }
 
 //p5.js draw
