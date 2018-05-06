@@ -24,6 +24,7 @@ time, mark, audio, video {
 
 /****************/
 /* page styling */
+
 body {
     z-index: 2;
 }
@@ -43,8 +44,6 @@ header{
 }
 
 h1{
-
-
 
 }
 
@@ -139,22 +138,22 @@ hr{
 }
 
 .slidercontainer{
-	width: 20%;
+	width: 10%;
 	position: absolute;
 	top: 30px;
 }
 
 #attackContainer {
-	left: 10px;
+	left: 1%;
 }
 
 #decayContainer {
-	left: 410px;
+	left: 16%;
 
 }
 
 #densityContainer {
-	left: 810px;
+	left: 31%;
 
 }
 
