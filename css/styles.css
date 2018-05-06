@@ -31,7 +31,6 @@ time, mark, audio, video {
 	    z-index: 2;
 		overflow-y: hidden;
 		overflow-x: hidden;
-		position: relative;
 	}
 
 	header{
