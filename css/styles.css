@@ -30,6 +30,7 @@ time, mark, audio, video {
 	body {
 	    z-index: 2;
 		overflow-y: hidden;
+		overflow-x: hidden;
 		position: relative;
 	}
 
