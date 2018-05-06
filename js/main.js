@@ -19,8 +19,6 @@ var audioBuffer;
 
 var rate;
 
-var micLevel = 0;
-
 var posX, posY;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -44,13 +42,6 @@ window.onload = function() {
 
     var switcher = document.getElementById("buffsel");
     switcher.addEventListener("input", function() {
-        if (switcher.selectedIndex < 2) {
-            bufferSwitch(switcher.selectedIndex);
-            micLevel = 0;
-        } else {
-            micLevel = 1;
-        }
-        console.log(micLevel);
     });
 
     //call slider values
@@ -97,47 +88,6 @@ var getIr = new XMLHttpRequest();
     };
 
     getIr.send();
-
-//mic input!
-var player = document.getElementById('player');
-
-var handleSuccess = function(stream) {
-      var source = ctx.createMediaStreamSource(stream);
-      var processor = ctx.createScriptProcessor(16384, 1, 1);
-
-      source.connect(processor);
-      processor.connect(micGain);
-
-      processor.onaudioprocess = function(e) {
-       // Do something with the data, i.e Convert this to WAV
-        var inputBuffer = e.inputBuffer;
-
-        // // The output buffer contains the samples that will be modified and played
-        var outputBuffer = e.outputBuffer;
-
-        // Loop through the output channels (in this case there is only one)
-        for (var channel = 0; channel < liveBuffer.numberOfChannels; channel++) {
-            var inputData = inputBuffer.getChannelData(channel);
-            var outputData = outputBuffer.getChannelData(channel);
-            var liveData = liveBuffer.getChannelData(channel);
-
-            // Loop through the 4096 samples
-        for (var sample = 0; sample < inputBuffer.length; sample++) {
-            // make output equal to the same as the input
-            outputData[sample] = inputData[sample];
-            liveData[sample] = inputData[sample];
-            };
-        };
-
-    }
-}
-
-
-
-    navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-        .then(handleSuccess);
-
-
 
 ////////////////////////////////////////////////////////////////////////////
 
@@ -273,10 +223,6 @@ function grans(pos, pitch) {
 
 
     //grain enveloping and verb
-
-
-
-
 }
 
 function bufferSwitch(input) {
@@ -296,11 +242,6 @@ function bufferSwitch(input) {
             });
         };
         getSound.send();
-}
-
-//check for live input
-function hasGetUserMedia() {
-    return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
 }
 
 
