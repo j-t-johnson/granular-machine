@@ -19,7 +19,7 @@ var audioBuffer;
 
 var ctx, master, cVerb, irBuff
 
-var rate;
+var rate, frate;
 
 var posX, posY;
 
@@ -106,7 +106,7 @@ function setup() {
     gcanvas.class("grainCanvas");
     gcanvas.parent("canvasContainer");
 
-    for (var i = 0; i < windowWidth/5; i++) {
+    for (var i = 0; i < windowWidth*1.2; i++) {
         bg.push(new Clouds());
         bg[i].seed();
     }
@@ -117,8 +117,6 @@ function setup() {
 
     ellipseMode(RADIUS);
     noStroke();
-
-    console.log(windowWidth);
 }
 
 //p5.js draw
@@ -129,14 +127,14 @@ function draw() {
 
     clear();
 
+    //re-draw border post-grid
+    for (var i = 0; i < bg.length; i++) {
+        bg[i].draw();
+    }
+
     //limit drawing to within canvas
     if (posX > 0 && posX < windowWidth && posY > windowHeight*0.0005 && posY < windowHeight ) {
-        //re-draw border post-grid
-        for (var i = 0; i < bg.length; i++) {
-            bg[i].draw();
-        }
         if (mouseIsPressed) {
-
 
             //draw circle when mouse is pressed
             for (var i = 0; i < dots.length; i++) {
@@ -145,15 +143,16 @@ function draw() {
             grans(posX, posY);
     }
 
-    //re-draw border post-grid
-    for (var i = 0; i < bg.length; i++) {
-        bg[i].draw();
-    }
     stroke(0);
     strokeWeight(4);
     noFill();
     noStroke();
-    frameRate(rate);
+    if (rate > 100) {
+        frate = 100;
+    } else {
+        frate = rate;
+    }
+    frameRate(frate);
     }
 }
 
@@ -189,7 +188,7 @@ function grans(pos, pitch) {
     var len, factor, position, randFactor;
 
     contour.gain.setValueAtTime(0, ctx.currentTime);
-    contour.gain.linearRampToValueAtTime(0.6 * rand(0, 1), ctx.currentTime + att);
+    contour.gain.linearRampToValueAtTime(0.6 * rand(0.5, 1), ctx.currentTime + att);
     contour.gain.linearRampToValueAtTime(0, ctx.currentTime + (att + dec));
 
     contour.connect(verbLevel);
@@ -253,13 +252,13 @@ function Clouds() {
     this.y;
 
     this.seed = function () {
-        this.x = randomX();
-        this.y = randomY();
+        this.x = randomGaussian(windowWidth/2, windowWidth / 2);
+        this.y = randomGaussian(windowHeight/2, windowHeight / 2);
     }
 
     this.draw = function () {
         noStroke();
-        fill(150, 10)
+        fill(150, 50)
         ellipse(this.x, this.y, 100, 100);
     }
 }
