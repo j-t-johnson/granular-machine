@@ -1,11 +1,8 @@
 //////////////////////
 // Jacob Johnson    //
-// EP 491 Ex. 1     //
-// main.js          //
+// granular-machine //
 //////////////////////
 
-//clear out some of these globals
-//p5 global vars (avoid redeclaration in every iteration of draw)
 var rad = 15;
 var shade = 150;
 
